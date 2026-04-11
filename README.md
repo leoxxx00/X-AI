@@ -19,18 +19,6 @@ This project was developed as part of my undergraduate third year final projectd
     Assessment of retrieval-augmented generation (RAG) for medically precise question answering. 
 7.Automated Generation of Question-and-Answer Datasets* Create an agent-based RAG system using Lang Chain/Lang Graph for the automatic generation of Q&A datasets from online sources, hence reducing human labour. Production-Ready Full-Stack Platform Integrate and implement a scalable ECG question-and-answer and assessment platform using Next.js, Fast API, Redis, PostgreSQL, Docker, and AWS.
 
-
-Example:
-This project implements an AI-powered question-answering system that integrates web scraping, semantic search, and large language models to provide accurate and context-aware responses.
-
----
-
-## ⚙️ Features
-
-* Feature 1
-* Feature 2
-* Feature 3
-
 ---
 
 ## 🛠️ Technologies Used
