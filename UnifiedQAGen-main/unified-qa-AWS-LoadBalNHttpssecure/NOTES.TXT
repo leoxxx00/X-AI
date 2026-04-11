@@ -1,0 +1,59 @@
+DOCKER BUILD
+docker compose -f infra/docker-compose.yml up --build
+
+API test
+http://localhost:3000
+
+results
+curl http://localhost:8001/api/v1/jobs/fa09d0ba-842b-451c-8e47-f8a3142f6b4e/results
+
+File paths guide
+UNIFIED-QA-PLATFORM(V1)/
+├── apps/
+│   ├── api/
+│   │   ├── app/
+│   │   ├── Dockerfile
+│   │   └── requirements.txt
+│   ├── web/
+│   │   ├── app/
+│   │   │   ├── evaluator/
+│   │   │   │   └── page.tsx
+│   │   │   ├── jobs/
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx
+│   │   │   ├── global.css
+│   │   │   ├── globals.css
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── lib/
+│   │   │   └── api.ts
+│   │   ├── Dockerfile
+│   │   ├── next.config.js
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── worker/
+│       ├── app/
+│       │   ├── core/
+│       │   │   ├── config.py
+│       │   │   └── logging.py
+│       │   ├── pipeline/
+│       │   │   ├── engine.py
+│       │   │   ├── evaluator.py
+│       │   │   ├── exporter.py
+│       │   │   ├── extractor.py
+│       │   │   ├── generator.py
+│       │   │   └── rag.py
+│       │   ├── shared/
+│       │   │   └── types.py
+│       │   └── main.py
+│       ├── Dockerfile
+│       └── requirements.txt
+├── infra/
+│   └── cloudrun/
+│       ├── api-services.yaml
+│       ├── web-service.yaml
+│       └── worker-service.yaml
+├── docker-compose.yml
+├── .env
+├── NOTES.TXT
+└── README.md

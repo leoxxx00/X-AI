@@ -1,0 +1,20 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: unifiedqa-worker
+spec:
+  template:
+    spec:
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT_ID/unifiedqa/worker:latest
+          env:
+            - name: DATABASE_URL
+              value: YOUR_DATABASE_URL
+            - name: REDIS_URL
+              value: YOUR_REDIS_URL
+            - name: DEEPSEEK_API_KEY
+              value: YOUR_DEEPSEEK_API_KEY
+            - name: DEEPSEEK_BASE_URL
+              value: https://api.deepseek.com
+            - name: DEEPSEEK_MODEL
+              value: deepseek-chat
