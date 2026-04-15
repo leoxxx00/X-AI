@@ -39,8 +39,6 @@ This project was developed as part of my undergraduate third year final projectd
 
 **Professor Tatiana Kalganova**
 
----
-
 ## 📄 License
 
 This project is licensed under the MIT License.
